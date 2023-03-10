@@ -67,7 +67,7 @@ while menu > 0: #run game, exit if input = 0
             mon = monster_list.pop(0)
             mon_hp = mon.stats["hp"]
             print(len(monster_list) + 1, " Monsters remaining!")
-            score += 1
+            
         except:
             break
     
@@ -83,6 +83,7 @@ while menu > 0: #run game, exit if input = 0
         playerHp = attack(mon_att, playerHp)
         
         if mon_hp <= 0 and playerHp >0:
+            score += 1
             continue
         elif playerHp <= 0:
             print("you loose")
@@ -98,7 +99,7 @@ while menu > 0: #run game, exit if input = 0
     elif menu == 3: #ToDo: needs to do something #fleeing
         print("flee!")
 
-if score > 1:
+if score != 1:
     print("You Defeated ", score, " Monsters!")
 else:
     print("You Defeated ", score, " Monster!")
