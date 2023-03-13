@@ -26,19 +26,21 @@ class Character:
 
 def manage_list(action, lst, item): #load and save (character) list
     if action == "load":
-        output = lst.append(0)
+        item = lst.append(0)
     else:
         print("wrong action")
+    return lst
 
-character_list = manage_list("load")
-print(character_list(0).stats["name"]
+        
 c1 = Character("hans", 0)
+c2 = Character("blubb", 0)
+
+character_list = manage_list("load", character_list, c1)
+print(character_list(0).stats["name"])
+
 print(c1.experience)
 
 c1.update_exp(99)
-
 print(c1.experience)
-
 c1.update_exp(2)
-
 print(c1.experience)
