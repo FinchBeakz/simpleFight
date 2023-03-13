@@ -35,6 +35,8 @@ def manage_list(action, lst, item): #load and save (character) list
 c1 = Character("hans", 0)
 c2 = Character("blubb", 0)
 
+character_list = [c1, c2]
+
 character_list = manage_list("load", character_list, c1)
 print(character_list(0).stats["name"])
 
