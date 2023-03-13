@@ -24,8 +24,14 @@ class Character:
         if self.experience["lvl"] > old_level:
             print("level Up!")
 
-def manage_list(
+def manage_list(action, lst, item): #load and save (character) list
+    if action == "load":
+        output = lst.append(0)
+    else:
+        print("wrong action")
 
+character_list = manage_list("load")
+print(character_list(0).stats["name"]
 c1 = Character("hans", 0)
 print(c1.experience)
 
