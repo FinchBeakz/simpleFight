@@ -13,7 +13,7 @@ class Character:
                       "str":5,
                       "dex":5,
                       "int":5,
-                      "b_att":2,
+                      "base_att":2,
                       "att":0}
         
     def update_exp(self, exp_gained): #100 exp = 1 level (for now)
@@ -23,8 +23,8 @@ class Character:
         self.experience["lvl"] = math.floor(self.experience["exp"] / 100 + 1)
         if self.experience["lvl"] > old_level:
             print("level Up!")
-        
 
+def manage_list(
 
 c1 = Character("hans", 0)
 print(c1.experience)
